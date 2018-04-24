@@ -1,7 +1,6 @@
 import os
 import re
 import webbrowser
-from typing import List
 
 # Styles and scripting for the page
 
