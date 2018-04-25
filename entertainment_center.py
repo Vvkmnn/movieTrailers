@@ -3,6 +3,7 @@ import json
 import os
 import requests
 
+
 class Movie:
     """Movie properties: 
         imdb_id (str): The identifier for the movie from imdb.com
@@ -21,6 +22,7 @@ class Movie:
         self.year = year
         self.rated = rated
         self.poster_image_url = poster_image_url
+
 
 class EntertainmentCenter:
     """ Example metadata representing media in an entertainment center."""
@@ -76,8 +78,5 @@ class EntertainmentCenter:
                     movie.rated = data.get('Rated', '')
                     movie.poster_image_url = data.get('Poster', '')
                 else:
-                    print(
-                        "Fetching movie info for imdb id ({}) resulted in an"
-                        " error {}. {}".format(
-                            movie.imdb_id, response.status_code,
-                            data.get('Error', 'Unspecified error')))
+                    print("Fetching movie info for imdb id ({}) resulted in an" " error {}. {}".format(
+                        movie.imdb_id, response.status_code, data.get('Error', 'Unspecified error')))
